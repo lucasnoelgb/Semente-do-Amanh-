@@ -1,0 +1,277 @@
+/* Cores do site */
+:root {
+	--texto: #2e2a3b;
+	--fundo: #fdfbf8;
+	--claro: #fde8dc;
+	--verde: #2b6f6b;
+	--vermelho: #c8264b;
+	--borda: #e4dcd3;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: var(--texto);
+	background: var(--fundo);
+}
+
+h1, h2, h3 {
+	font-family: Georgia, serif;
+}
+
+a {
+	color: var(--verde);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 12px;
+}
+
+/* Cabeçalho e menu */
+header {
+	background: #fff;
+	border-bottom: 1px solid var(--borda);
+	padding: 10px 16px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px 20px;
+}
+
+.marca {
+	font: bold 22px Georgia, serif;
+	color: var(--texto);
+	text-decoration: none;
+	margin-right: auto;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	color: var(--texto);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a.atual {
+	border-bottom: 3px solid var(--verde);
+}
+
+/* Conteúdo */
+main {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+section {
+	margin: 40px 0;
+}
+
+/* Botões */
+.doar, .sec, button {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 20px;
+	font: bold 16px Arial, sans-serif;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.doar {
+	background: var(--vermelho);
+	color: #fff;
+	border: 2px solid var(--vermelho);
+}
+
+.sec {
+	background: #fff;
+	color: var(--verde);
+	border: 2px solid var(--verde);
+}
+
+button {
+	background: var(--verde);
+	color: #fff;
+	border: 2px solid var(--verde);
+	margin-top: 16px;
+}
+
+/* Blocos */
+.hero {
+	display: grid;
+	gap: 24px;
+	align-items: center;
+}
+
+.numeros {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: 16px;
+}
+
+.numeros strong {
+	display: block;
+	font: bold 48px Georgia, serif;
+	color: var(--verde);
+}
+
+.faixa {
+	background: var(--claro);
+	border-radius: 12px;
+	padding: 16px;
+}
+
+progress {
+	width: 100%;
+	height: 20px;
+}
+
+.grade {
+	display: grid;
+	gap: 16px;
+}
+
+figure {
+	margin: 0;
+}
+
+.cartao {
+	background: #fff;
+	border: 1px solid var(--borda);
+	border-radius: 12px;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.tag {
+	background: var(--claro);
+	border-radius: 20px;
+	padding: 2px 12px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.ilustra {
+	max-width: 480px;
+	margin: 16px 0;
+}
+
+.aviso {
+	background: var(--claro);
+	border-left: 6px solid var(--vermelho);
+	padding: 16px;
+}
+
+/* Tabelas */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border-bottom: 1px solid var(--borda);
+	padding: 8px;
+	text-align: left;
+}
+
+/* Formulários */
+fieldset {
+	border: 1px solid var(--borda);
+	border-radius: 12px;
+	margin-bottom: 16px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 12px;
+}
+
+input, select, textarea {
+	width: 100%;
+	padding: 10px;
+	font: inherit;
+	border: 2px solid var(--borda);
+	border-radius: 8px;
+}
+
+/* campo preenchido de forma errada fica vermelho */
+input:user-invalid, select:user-invalid, textarea:user-invalid {
+	border-color: #b3261e;
+}
+
+.opcao {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+input[type="radio"] {
+	width: auto;
+}
+
+.status:not(:empty) {
+	background: #e3f3ef;
+	border: 1px solid var(--verde);
+	border-radius: 12px;
+	padding: 12px;
+	font-weight: bold;
+}
+
+/* Botões pequenos da tabela do admin */
+td button {
+	margin: 0 4px 0 0;
+	padding: 2px 12px;
+	font-size: 14px;
+}
+
+footer {
+	background: var(--texto);
+	color: #fff;
+	padding: 24px 16px;
+	margin-top: 48px;
+}
+
+footer a {
+	color: #ffd9c7;
+}
+
+/* Telas maiores (mobile first: o que está acima vale para o celular) */
+@media (min-width: 640px) {
+	.grade, .numeros {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 960px) {
+	.hero {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* Mensagem de erro do login e botão Sair */
+.erro {
+	color: #b3261e;
+	font-weight: bold;
+}
+
+#sair {
+	margin-top: 0;
+	background: #fff;
+	color: var(--verde);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Painel de demonstração da equipe da Semente do Amanhã.">
+	<title>Painel do administrador | Semente do Amanhã</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/protecao.js"></script>
+</head>
+<body>
+	<header>
+		<a class="marca" href="index.html">Semente do Amanhã</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="projetos.html">Projetos</a></li>
+				<li><a href="cadastro.html">Cadastro</a></li>
+			</ul>
+		</nav>
+		<a class="doar" href="projetos.html#doar">Doar</a>
+		<button type="button" id="sair">Sair</button>
+	</header>
+
+	<main>
+		<h1>Painel do administrador</h1>
+		<p class="aviso"><strong>Demonstração.</strong> Esta página não tem login nem back-end: os dados são fictícios e as alterações somem ao recarregar a página.</p>
+
+		<section>
+			<h2>Métricas de engajamento</h2>
+			<ul class="numeros">
+				<li><strong>3.420</strong> visitas ao site no mês</li>
+				<li><strong>12</strong> novas candidaturas de voluntários</li>
+				<li><strong>R$ 34.000</strong> arrecadados na campanha</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Informações institucionais</h2>
+			<form data-mensagem="Informações salvas! (simulação)">
+				<fieldset>
+					<legend>Identidade da ONG</legend>
+					<label for="inst-missao">Missão *</label>
+					<textarea id="inst-missao" required rows="3">Garantir acesso a educação, alimento e saúde para famílias em vulnerabilidade.</textarea>
+					<label for="inst-visao">Visão *</label>
+					<textarea id="inst-visao" required rows="3">Uma cidade em que toda comunidade tem as mesmas oportunidades.</textarea>
+					<label for="inst-valores">Valores *</label>
+					<textarea id="inst-valores" required rows="3">Transparência, respeito, solidariedade e compromisso com resultados.</textarea>
+				</fieldset>
+				<fieldset>
+					<legend>Contato</legend>
+					<label for="inst-email">E-mail de contato *</label>
+					<input id="inst-email" type="email" required value="contato@sementedoamanha.org.br">
+					<label for="inst-endereco">Endereço *</label>
+					<input id="inst-endereco" type="text" required value="Rua da Esperança, 120, São Paulo, SP">
+				</fieldset>
+				<button type="submit">Salvar informações</button>
+				<p class="status"></p>
+			</form>
+		</section>
+
+		<section>
+			<h2>Projetos</h2>
+			<h3>Cadastrar ou editar projeto</h3>
+			<form id="form-projeto">
+				<fieldset>
+					<legend>Dados do projeto</legend>
+					<label for="proj-nome">Nome do projeto *</label>
+					<input id="proj-nome" type="text" required minlength="3">
+					<label for="proj-categoria">Categoria *</label>
+					<select id="proj-categoria" required>
+						<option value="">Selecione</option>
+						<option>Educação</option>
+						<option>Alimentação</option>
+						<option>Saúde</option>
+					</select>
+					<label for="proj-meta">Pessoas atendidas *</label>
+					<input id="proj-meta" type="number" required min="1" max="100000">
+				</fieldset>
+				<button type="submit">Salvar projeto</button>
+			</form>
+			<p id="status-projeto" class="status"></p>
+
+			<table>
+				<caption>Projetos cadastrados</caption>
+				<thead>
+					<tr><th>Projeto</th><th>Categoria</th><th>Pessoas atendidas</th><th>Ações</th></tr>
+				</thead>
+				<tbody id="lista-projetos">
+					<tr>
+						<td>Reforço Escolar</td>
+						<td>Educação</td>
+						<td>150</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Horta Comunitária</td>
+						<td>Alimentação</td>
+						<td>60</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Saúde na Comunidade</td>
+						<td>Saúde</td>
+						<td>300</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section>
+			<h2>Voluntários</h2>
+			<table>
+				<caption>Voluntários e candidaturas (dados fictícios)</caption>
+				<tr><th>Nome</th><th>Projeto</th><th>Situação</th></tr>
+				<tr><td>Ana Souza</td><td>Reforço Escolar</td><td>Ativa</td></tr>
+				<tr><td>Carlos Lima</td><td>Horta Comunitária</td><td>Ativo</td></tr>
+				<tr><td>Juliana Reis</td><td>Saúde na Comunidade</td><td>Candidatura em análise</td></tr>
+			</table>
+		</section>
+
+		<section>
+			<h2>Doações recentes</h2>
+			<table>
+				<caption>Doações recebidas (dados fictícios)</caption>
+				<tr><th>Data</th><th>Valor</th><th>Campanha</th></tr>
+				<tr><td>02/10/2026</td><td>R$ 100</td><td>Merenda Escolar</td></tr>
+				<tr><td>28/09/2026</td><td>R$ 50</td><td>Merenda Escolar</td></tr>
+				<tr><td>15/09/2026</td><td>R$ 200</td><td>Onde for mais necessário</td></tr>
+			</table>
+		</section>
+	</main>
+
+	<footer>
+		<h2>Contato</h2>
+		<address>
+			Rua da Esperança, 120, São Paulo, SP<br>
+			Se quiser abrir uma ONG em colaboração com o projeto Sementes do Amanhã, envie um e-mail para nós<br>
+			<a href="mailto:contato@sementedoamanha.org.br">contato@sementedoamanha.org.br</a> |
+			WhatsApp <a href="https://wa.me/5511940000000">(11) 94000-0000</a>
+		</address>
+		<p><a href="admin.html">Área da equipe (demonstração)</a></p>
+		<small>&copy; 2026 Semente do Amanhã. Projeto acadêmico.</small>
+	</footer>
+
+	<script src="js/sair.js"></script>
+	<script src="js/admin.js"></script>
+	<script src="js/formularios.js"></script>
+</body>
+</html>
