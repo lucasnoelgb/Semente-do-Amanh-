@@ -1,8 +1,7 @@
 # Integrantes do grupo
-
-Felipe da Silva Santos 
-Lucas Noel Gomes Batista
-Gabriel Gustavo Lins Matos
+Lucas Noel Gomes Batista<br>
+Felipe da Silva Santos <br>
+Gabriel Gustavo Lins Matos<br>
 Matheus Toyokawa Xisto
 
 # Semente do Amanhã – site para ONGs
@@ -43,9 +42,3 @@ img/            Imagens
 | Newsletter e novidades | `index.html` |
 | Responsivo (mobile-first) | `css/style.css` (`@media`) |
 | Lazy loading nas imagens | atributo `loading="lazy"` |
-
-## Limitações
-
-- Os formulários não enviam dados (simulação). Um envio real precisa de back-end.
-- O login é só de demonstração: a senha fica visível no código (`js/login.js`). Um login real precisa de servidor e banco de dados. Nada do painel é salvo.
-- Os relatórios em PDF estão como "em breve".
